@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
@@ -11,5 +10,4 @@ public class NewBehaviourScript : MonoBehaviour
         neutral,
         bad,
     }
-
 }
