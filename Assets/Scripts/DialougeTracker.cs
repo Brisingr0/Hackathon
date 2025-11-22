@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DialougeTracker : MonoBehaviour
 {
+    public static DialougeTracker instance;
+
     enum NPC
     {
         Nessie,
@@ -22,6 +24,7 @@ public class DialougeTracker : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         NessieDialogue = new TextAsset[12];
         MishaDialogue = new TextAsset[12];
         RitaDialogue = new TextAsset[12];
@@ -56,5 +59,23 @@ public class DialougeTracker : MonoBehaviour
         return "";
     }
 
+    public bool IsNessie()
+    {
+        return currentNPC == NPC.Nessie;
+    }
 
+    public bool IsMisha()
+    {
+        return currentNPC == NPC.Misha;
+    }
+
+    public bool IsRita()
+    {
+        return currentNPC == NPC.Rita;
+    }
+
+    public bool IsEllie()
+    {
+        return currentNPC == NPC.Ellie;
+    }
 }
