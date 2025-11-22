@@ -6,7 +6,9 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public string[] lines;
+    public TextMeshProUGUI NPCname;
+    public TextAsset textFile;
+    public List<string> lines = new List<string>();
     public float textSpeed;
 
     private int index;
@@ -15,8 +17,29 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         textComponent.text = string.Empty;
+        string text = textFile.text;
+
+        LoadLines();
         StartDialogue();
     }
+
+    void LoadLines()
+    {
+        string[] rawLines = textFile.text.Split(new[] { "\r\n", "\n" }, System.StringSplitOptions.None);
+        foreach (string line in rawLines)
+        {
+            if(line.Contains(":"))
+            {
+                string[] parts = line.Split(":");
+                NPCname.text = parts[0].Trim();
+                lines.Add(parts[1].Trim());
+            }
+            else
+            {
+                lines.Add(line.Trim());
+            }
+        }
+     }
 
     void Update()
     {
@@ -42,7 +65,7 @@ public class Dialogue : MonoBehaviour
 
         void NextLine()
         {
-            if (index < lines.Length - 1)
+        if (index < lines.Count)
             {
                 index++;
                 textComponent.text = string.Empty;
