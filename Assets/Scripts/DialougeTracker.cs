@@ -19,6 +19,8 @@ public class DialougeTracker : MonoBehaviour
     [SerializeField] private TextAsset[] MishaDialogue;
     [SerializeField] private TextAsset[] RitaDialogue;
     [SerializeField] private TextAsset[] EllieDialogue;
+    [SerializeField] private MonthlyMoney monthlyMoney;
+    [SerializeField] private MoneyValuesSO moneyValuesSO;
     private NPC currentNPC;
     private int month;
 
@@ -49,6 +51,7 @@ public class DialougeTracker : MonoBehaviour
             case NPC.Ellie:
                 currentNPC = NPC.Nessie;
                 month++;
+                monthlyMoney.SetMonthlyMoney(moneyValuesSO.baseIncomeMonthly);
                 if (month > 12) {
                     Debug.Log("Game Over");
                     return "";

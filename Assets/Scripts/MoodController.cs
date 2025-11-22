@@ -18,15 +18,12 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (DialougeTracker.instance.IsNessie())
         {
-            if (money/moneyValuesSO.NessieNecessitiesAmount > 1.05)
+            if (money/moneyValuesSO.NessieNecessitiesAmount >= .99)
             {
                 mood = Mood.good;
-            } else if (money/moneyValuesSO.NessieNecessitiesAmount < .95)
+            } else if (money/moneyValuesSO.NessieNecessitiesAmount < .99)
             {
                 mood = Mood.bad;
-            } else
-            {
-                mood = Mood.neutral;
             }
         }
         else if(DialougeTracker.instance.IsMisha())

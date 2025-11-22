@@ -10,11 +10,13 @@ public class ExpectedIncomeToValues : MonoBehaviour
     [SerializeField] private MoneyValuesSO moneyValuesSO;
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private TextMeshProUGUI textMeshProUGUI;
+    [SerializeField] private MonthlyMoney monthlyMoney;
 
     public void SetMoneyValues(float yearly)
     {
         moneyValuesSO.baseIncomeYearly = yearly;
         moneyValuesSO.baseIncomeMonthly = yearly / 12;
+        monthlyMoney.SetMonthlyMoney(yearly / 12);
         moneyValuesSO.NessieNecessitiesAmount = (float) (moneyValuesSO.baseIncomeMonthly * 0.5);
         moneyValuesSO.RitaRetirementAmount = (float) (moneyValuesSO.baseIncomeMonthly * 0.2);
         moneyValuesSO.MishaLoanAmount = (float) (moneyValuesSO.baseIncomeMonthly * 0.2);
@@ -26,7 +28,6 @@ public class ExpectedIncomeToValues : MonoBehaviour
     public void GetInputFieldValue()
     {
         string tmp = inputField.text;
-        Debug.Log(tmp);
         int yearly = int.Parse(tmp);
         SetMoneyValues(yearly);
     }
