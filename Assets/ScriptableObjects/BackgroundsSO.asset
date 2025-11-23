@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3591537435e3e0428eb86aa815cf11b, type: 3}
   m_Name: BackgroundsSO
   m_EditorClassIdentifier: 
-  house: {fileID: 0}
-  apartment: {fileID: 0}
-  bridge: {fileID: 0}
+  house: {fileID: 21300000, guid: 9e0b635a28dd97e4d91547a3a46b131a, type: 3}
+  apartment: {fileID: 21300000, guid: bffc59146e259b3488ad4e659765a6b9, type: 3}
+  bridge: {fileID: 21300000, guid: 3320b3d7799f61f48b73a91ebb6e301b, type: 3}
