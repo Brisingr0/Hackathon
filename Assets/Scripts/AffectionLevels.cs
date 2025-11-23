@@ -7,6 +7,8 @@ public class AffectionLevels : MonoBehaviour
 {
     public static AffectionLevels Instance;
 
+    [SerializeField] private BackgroundsSO backgroundsSO;
+    [SerializeField] private GameObject Background;
     [SerializeField] private Image bar;
     private int NessieLevel;
     private int MishaLevel;
@@ -47,6 +49,15 @@ public class AffectionLevels : MonoBehaviour
     public void ChangeNessieLevelBy(int level)
     {
         NessieLevel += level;
+        if (NessieLevel < 4)
+        {
+            Background.GetComponent<SpriteRenderer>().sprite = backgroundsSO.bridge;
+        } else if (NessieLevel < 7) {
+            Background.GetComponent<SpriteRenderer>().sprite = backgroundsSO.apartment;
+        } else
+        {
+            Background.GetComponent<SpriteRenderer>().sprite = backgroundsSO.house;
+        }
     }
 
     public int GetMishaLevel()
