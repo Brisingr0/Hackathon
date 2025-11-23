@@ -1,2 +1,4 @@
 Misha Mavlynov: Hello
 Misha Mavlynov: How much money are you willing to spend on me?
+*input*
+Misha Mavlynov: Great!
