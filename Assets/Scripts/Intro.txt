@@ -1,0 +1,21 @@
+Nessie: Hi! My name is Nessie!
+Nessie: What's your name?
+*input*
+Nessie: Before I introduce you to some very special friends, I just have a few questions!
+RULES Box: This game is designed to help you manage your budget! To determine your budget, Nessie will be asking you a series of questions. Your answers to these questions will not be shared.
+Nessie: What is your expected future salary?
+*input*
+Nessie: Thank you so much for answering! Here are my recommendations...
+RULES Box: We are recommending your budget based on the 50/30/20 budget method. For more information on this budget method, click this link!
+RULES Box: After controlling for your necessities. You have <leftover> left to spend
+RULES Box: 50% should go to additional necessities. You should spend <necessities> on your necessities
+RULES Box: This includes loans. We recommend you spend <loans> on your loans
+RULES Box: 30% should go towards wants. We recommend spending <wants> on wants
+RULES Box: 20% should go towards your savings. We recommend spending <savings> on savings
+Nessie: Thanks for that! Now, welcome to the world of _____!
+Nessie: Like I said, my name is Nessie. I'm here to make sure you pay for your necessities
+Nessie: Rent, food, gas...all of it falls into my area
+*Nessie smirk*
+Nessie: You better not disappoint me
+*Nessie normal*
+Nessie: Now, let me introduce you to my friends!
