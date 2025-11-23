@@ -27,10 +27,6 @@ public class DialougeTracker : MonoBehaviour
     private void Start()
     {
         instance = this;
-        NessieDialogue = new TextAsset[12];
-        MishaDialogue = new TextAsset[12];
-        RitaDialogue = new TextAsset[12];
-        EllieDialogue = new TextAsset[12];
         currentNPC = NPC.Nessie;
         month = 0;
     }

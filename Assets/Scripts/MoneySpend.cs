@@ -8,6 +8,8 @@ public class MoneySpend : MonoBehaviour
 {
     public TMP_InputField input;
     private int numValue;
+    public bool EditEnd = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,7 @@ public class MoneySpend : MonoBehaviour
     public void DeleteInputField()
     {
         input.gameObject.SetActive(false);
+        EditEnd = true;
     }
 
     // Update is called once per frame

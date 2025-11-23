@@ -7,6 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public TextMeshProUGUI NPCname;
+    public TMP_InputField input;
     public TextAsset textFile;
     public List<string> lines = new List<string>();
     public float textSpeed;
@@ -26,10 +27,12 @@ public class Dialogue : MonoBehaviour
     void LoadLines()
     {
         DialougeTracker tracker = EventMachine.GetComponent<DialougeTracker>();
+
         string[] rawLines = tracker.GetDialouge().Split(new[] { "\r\n", "\n" }, System.StringSplitOptions.None);
         foreach (string line in rawLines)
         {
-            if(line.Contains(":"))
+            Debug.Log(rawLines);
+            if (line.Contains(":"))
             {
                 string[] parts = line.Split(":");
                 NPCname.text = parts[0].Trim();
@@ -40,12 +43,16 @@ public class Dialogue : MonoBehaviour
                 lines.Add(line.Trim());
             }
         }
+
      }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        MoneySpend inputField = EventMachine.GetComponent<MoneySpend>();
+
+        if (Input.GetMouseButtonDown(0) && !input.gameObject.activeSelf)
         {
+
             if (textComponent.text == lines[index])
             {
                 NextLine();
@@ -55,6 +62,10 @@ public class Dialogue : MonoBehaviour
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
+        }
+        else if(inputField.EditEnd == true)
+        {
+            
         }
     }
 
@@ -66,7 +77,7 @@ public class Dialogue : MonoBehaviour
 
         void NextLine()
         {
-        if (index < lines.Count)
+            if (index < lines.Count - 1)
             {
                 index++;
                 textComponent.text = string.Empty;
@@ -80,6 +91,13 @@ public class Dialogue : MonoBehaviour
 
         IEnumerator TypeLine()
         {
+             MoneySpend inputField = EventMachine.GetComponent<MoneySpend>();
+            if (lines[index].Contains("*input*"))
+            {
+                inputField.CallInputField();
+                lines.RemoveAt(index);
+                yield break;
+            }
             foreach (char c in lines[index].ToCharArray())
             {
                 textComponent.text += c;
