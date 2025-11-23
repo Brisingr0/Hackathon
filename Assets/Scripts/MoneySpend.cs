@@ -7,6 +7,7 @@ using TMPro;
 public class MoneySpend : MonoBehaviour
 {
     public TMP_InputField input;
+    public GameObject EventMachine;
     private int numValue;
     public bool EditEnd = false;
 
@@ -31,6 +32,10 @@ public class MoneySpend : MonoBehaviour
 
         //disappear input field
         DeleteInputField();
+
+        //call set mood
+        NewBehaviourScript mood = EventMachine.GetComponent<NewBehaviourScript>();
+        mood.SetMood(numValue);
 
         return InputNum;
     }
