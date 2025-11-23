@@ -37,6 +37,13 @@ public class DialougeTracker : MonoBehaviour
 
     public String GetDialouge()
     {
+        if (month >= 2)
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+            Application.Quit();
+        }
         if (currentNPC != nextNPC)
         {
             currentNPC = nextNPC;
@@ -81,11 +88,6 @@ public class DialougeTracker : MonoBehaviour
                     call = 0;
                     month++;
                     monthlyMoney.SetMonthlyMoney(moneyValuesSO.baseIncomeMonthly);
-                    if (month > 12)
-                    {
-                        Debug.Log("Game Over");
-                        return "";
-                    }
                 } else
                 {
                     call++;

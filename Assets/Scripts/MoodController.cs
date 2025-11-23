@@ -46,7 +46,7 @@ public class NewBehaviourScript : MonoBehaviour
             }
             else
             {
-                mood = Mood.neutral;
+                mood = Mood.good;
                 ChangeCharacterSprite.Instance.SetMishaSprite(1);
             }
         }
@@ -60,13 +60,13 @@ public class NewBehaviourScript : MonoBehaviour
             }
             else if (money / moneyValuesSO.MishaLoanAmount < .95)
             {
-                mood = Mood.bad;
+                mood = Mood.neutral;
                 AffectionLevels.Instance.ChangeRitaLevelBy(-1);
                 ChangeCharacterSprite.Instance.SetRitaSprite(0);
             }
             else
             {
-                mood = Mood.neutral;
+                mood = Mood.good;
                 ChangeCharacterSprite.Instance.SetRitaSprite(1);
             }
         }
@@ -80,13 +80,13 @@ public class NewBehaviourScript : MonoBehaviour
             }
             else if (money / moneyValuesSO.EllieEntertainmentAmount < .95)
             {
-                mood = Mood.bad;
+                mood = Mood.neutral;
                 AffectionLevels.Instance.ChangeEllieLevelBy(-1);
                 ChangeCharacterSprite.Instance.SetEllieSprite(0);
             }
             else
             {
-                mood = Mood.neutral;
+                mood = Mood.good;
                 ChangeCharacterSprite.Instance.SetEllieSprite(1);
             }
         }

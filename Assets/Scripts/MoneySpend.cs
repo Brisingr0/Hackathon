@@ -6,9 +6,11 @@ using TMPro;
 
 public class MoneySpend : MonoBehaviour
 {
+    [SerializeField] private MonthlyMoney monthlyMoney;
+    [SerializeField] private TextMeshProUGUI textMeshProUGUI;
     public TMP_InputField input;
     public GameObject EventMachine;
-    private int numValue;
+    private float numValue;
     public bool EditEnd = false;
 
     // Start is called before the first frame update
@@ -19,16 +21,23 @@ public class MoneySpend : MonoBehaviour
 
     public void GetInput(string text)
     {
-        Debug.Log("accessed");
-        int InputNum = 0;
-        if(int.TryParse(input.text, out numValue))
+        float InputNum = 0;
+        if(float.TryParse(input.text, out numValue))
         {
+            if (monthlyMoney.GetMonthlyMoney() - numValue < 0)
+            {
+                textMeshProUGUI.gameObject.SetActive(true);
+                return;
+            }
             InputNum = numValue;
         }
         else
         {
             InputNum = 0;
         }
+        textMeshProUGUI.gameObject.SetActive(false);
+        monthlyMoney.ChangeMonthlyMoney(InputNum);
+
 
         //call set mood
         NewBehaviourScript mood = EventMachine.GetComponent<NewBehaviourScript>();
@@ -47,11 +56,5 @@ public class MoneySpend : MonoBehaviour
     {
         EditEnd = true;
         input.gameObject.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-   
     }
 }

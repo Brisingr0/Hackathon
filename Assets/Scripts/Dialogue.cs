@@ -35,7 +35,6 @@ public class Dialogue : MonoBehaviour
 
     void LoadLines()
     {
-        Debug.Log("call");
         string[] rawLines = tracker.GetDialouge().Split(new[] { "\r\n", "\n" }, System.StringSplitOptions.None);
         bool reachedBranch = false;
 
@@ -43,7 +42,7 @@ public class Dialogue : MonoBehaviour
         {
             string line = l.Trim();
 
-            if (line == "&" ||  line == "!" || line == "#")
+            if (line == "&" ||  line == "$" || line == "#")
             {
                 reachedBranch = true;
                 continue;
@@ -58,7 +57,6 @@ public class Dialogue : MonoBehaviour
 
     void LoadBranch(char BlockType)
     {
-        Debug.Log("Call");
         string[] raw = tracker.GetDialouge().Split(new[] {"\r\n", "\n"}, System.StringSplitOptions.None);
         bool inBlock = false;
 
@@ -110,7 +108,7 @@ public class Dialogue : MonoBehaviour
         }
         else if(mood.IsNeutralMood())
         {
-            return '!';
+            return '$';
         }
         return '#';
     }
@@ -131,7 +129,6 @@ public class Dialogue : MonoBehaviour
         }
         else if(inputFinish)
         {
-            Debug.Log("finish");
             if (finish == 1)
             {
                 finish = 0;

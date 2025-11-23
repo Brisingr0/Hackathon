@@ -15,6 +15,12 @@ public class MonthlyMoney : MonoBehaviour
         text.text = '$' + monthlyMoney.ToString();
     }
 
+    public void ChangeMonthlyMoney(float money)
+    {
+        monthlyMoney -= money;
+        text.text = '$' + monthlyMoney.ToString();
+    }
+
     public float GetMonthlyMoney()
     {
         return monthlyMoney;

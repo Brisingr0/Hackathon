@@ -1,0 +1,22 @@
+Rita: Heyyyy! Good to see ya!
+Rita: How ya doing?
+Rita: Good, I'm sure
+Rita: How much did you put into savings?
+*input*
+&
+Rita: Ya did it again, chap!
+Rita: That looks great!
+Rita: You're a riot kid
+Rita: You'll be good!
+Rita: KEEP MAKING ME PROUD!
+Rita: I'm gonna turn in. See ya next time!
+&
+$
+Rita: Woah!
+Rita: Don't you want to save little more?
+Rita: Hey that's fine!
+Rita: But next month, but one good month doesn't a retirement plan make!
+Rita: Yaawwwwwnnnnnn...
+Rita: I'm gonna turn in for the night
+Rita: Hope you have better news for me next time!
+$

@@ -13,7 +13,7 @@ Ellie: I mean, I wouldn't tell her I saw you...
 Ellie: If you want to stay...
 Ellie: But, invite me over tomorrow! I want to talk to you a little more!
 &
-!
+$
 Ellie: Oh!
 Ellie: ...
 Ellie: That's it?
@@ -23,3 +23,4 @@ Ellie: ...
 Ellie: You spending time with me is all I need, anyway
 Ellie: Oh! And Rita said she was looking for you!
 Ellie: You should probably go find her!
+$

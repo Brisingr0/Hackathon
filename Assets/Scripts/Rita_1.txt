@@ -13,7 +13,7 @@ Rita: Wow. It's getting late
 Rita: Thanks again for everything!!
 Rita: Have a great nightttttt!!!!!! Sleep tightttttttttt!!!!!!
 &
-!
+$
 Rita: What!?
 Rita: That's it?!
 Rita: Really?
@@ -26,3 +26,4 @@ Rita: I mean...I guess it isn't my problem...
 Rita: Yawwwwwwnnnnnn
 Rita: Well, I'm pretty tired. You better have more for me next time
 Rita: I'm just trying to help you
+$

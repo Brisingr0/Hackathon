@@ -1,0 +1,24 @@
+Ellie: Hi!!!
+Ellie: I've been waiting for you!!
+Ellie: Where have you been??
+Ellie: Did you bring me anything!
+*input*
+$
+Ellie: WOW! This is perfect!
+Ellie: You're so responsible!
+Ellie: I mean, it's great. I'm very happy with you!
+Ellie: When you get rich, you'll think of me, okkkk???
+Ellie: Just remember who helped ya!
+$
+&
+Ellie: Whoa
+Ellie: You move way too fast
+Ellie: I don't know you well enough to justify any of this
+Ellie: ...
+Ellie: It's kind of creepy
+Ellie: Sometimes, nice can be creepy
+Ellie: I thought you were cool
+Ellie: Whatever. It's just this once
+Ellie: I'm settling a boundary! Don't do it again!
+Ellie: See ya, I guess! Don't be weird next time!
+&

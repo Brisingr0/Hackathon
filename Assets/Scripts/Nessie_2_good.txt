@@ -1,0 +1,25 @@
+Nessie: Good to see you! I was wondering when you would show up!
+Nessie: Do you like what I did with the place?
+Nessie: I gave it a little upgrade!
+Nessie: So, how much do you have to give me?
+*input*
+&
+Nessie: Nice!
+Nessie: I knew you could keep it up!
+Nessie: You're keeping your life stable
+Nessie: I hope you can say the same to Misha
+Nessie: You should go see him!
+&
+#
+Nessie: Oh!
+Nessie: ...
+Nessie: I'm kinda surprised
+Nessie: How did you not meet your goals?
+Nessie: Do you need some kinda support?
+Nessie: Well, I'm happy to help if you need anything
+Nessie: I hope you have better news for Misha
+Nessie: He's looking for you
+Nessie: Don't be scared, I know this was just a one-time thing...
+Nessie: Right?
+Nessie: I trust you to do better in the future
+#
