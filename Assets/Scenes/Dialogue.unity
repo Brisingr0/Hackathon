@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &234727578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2946441680015749239, guid: 991a228429e39004788655b0b8e7ef56, type: 3}
+  m_PrefabInstance: {fileID: 3321299471676127362}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c4832cc3bd53f408c392722ff59e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &758406390
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +402,10 @@ PrefabInstance:
     - target: {fileID: 6355692646605776517, guid: 991a228429e39004788655b0b8e7ef56, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 234727578}
+    - target: {fileID: 6355692646605776517, guid: 991a228429e39004788655b0b8e7ef56, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteInputField
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
