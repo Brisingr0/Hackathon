@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class BackgroundsSO : ScriptableObject
 {
-    public GameObject house;
-    public GameObject apartment;
-    public GameObject bridge;
+    public Sprite house;
+    public Sprite apartment;
+    public Sprite bridge;
 }
