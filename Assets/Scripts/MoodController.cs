@@ -21,9 +21,11 @@ public class NewBehaviourScript : MonoBehaviour
             if (money/moneyValuesSO.NessieNecessitiesAmount >= .99)
             {
                 mood = Mood.good;
+                AffectionLevels.Instance.ChangeNessieLevelBy(1);
             } else if (money/moneyValuesSO.NessieNecessitiesAmount < .99)
             {
                 mood = Mood.bad;
+                AffectionLevels.Instance.ChangeNessieLevelBy(-1);
             }
         }
         else if(DialougeTracker.instance.IsMisha())
@@ -31,10 +33,12 @@ public class NewBehaviourScript : MonoBehaviour
             if (money / moneyValuesSO.MishaLoanAmount > 1.05)
             {
                 mood = Mood.good;
+                AffectionLevels.Instance.ChangeMishaLevelBy(1);
             }
             else if (money / moneyValuesSO.MishaLoanAmount < .95)
             {
                 mood = Mood.bad;
+                AffectionLevels.Instance.ChangeMishaLevelBy(-1);
             }
             else
             {
@@ -46,10 +50,12 @@ public class NewBehaviourScript : MonoBehaviour
             if (money / moneyValuesSO.RitaRetirementAmount > 1.05)
             {
                 mood = Mood.good;
+                AffectionLevels.Instance.ChangeRitaLevelBy(1);
             }
             else if (money / moneyValuesSO.MishaLoanAmount < .95)
             {
                 mood = Mood.bad;
+                AffectionLevels.Instance.ChangeRitaLevelBy(-1);
             }
             else
             {
@@ -61,10 +67,12 @@ public class NewBehaviourScript : MonoBehaviour
             if (money / moneyValuesSO.EllieEntertainmentAmount > 1.05)
             {
                 mood = Mood.good;
+                AffectionLevels.Instance.ChangeEllieLevelBy(1);
             }
             else if (money / moneyValuesSO.EllieEntertainmentAmount < .95)
             {
                 mood = Mood.bad;
+                AffectionLevels.Instance.ChangeEllieLevelBy(-1);
             }
             else
             {
