@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
     public TextAsset textFile;
     public List<string> lines = new List<string>();
     public float textSpeed;
+    public GameObject EventMachine;
 
     private int index;
 
@@ -17,7 +18,6 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         textComponent.text = string.Empty;
-        string text = textFile.text;
 
         LoadLines();
         StartDialogue();
@@ -25,7 +25,8 @@ public class Dialogue : MonoBehaviour
 
     void LoadLines()
     {
-        string[] rawLines = textFile.text.Split(new[] { "\r\n", "\n" }, System.StringSplitOptions.None);
+        DialougeTracker tracker = EventMachine.GetComponent<DialougeTracker>();
+        string[] rawLines = tracker.GetDialouge().Split(new[] { "\r\n", "\n" }, System.StringSplitOptions.None);
         foreach (string line in rawLines)
         {
             if(line.Contains(":"))

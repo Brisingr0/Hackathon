@@ -1,0 +1,51 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class MoneySpend : MonoBehaviour
+{
+    public TMP_InputField input;
+    private int numValue;
+    // Start is called before the first frame update
+    void Start()
+    {
+        input.gameObject.SetActive(false);
+    }
+
+    public int GetInput(string text)
+    {
+        Debug.Log(text);
+        int InputNum = 0;
+        if(int.TryParse(input.text, out numValue))
+        {
+            InputNum = numValue;
+        }
+        else
+        {
+            InputNum = 0;
+        }
+
+        //disappear input field
+        DeleteInputField();
+
+        return InputNum;
+    }
+
+    public void CallInputField()
+    {
+        input.gameObject.SetActive(true);
+    }
+
+    public void DeleteInputField()
+    {
+        input.gameObject.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+   
+    }
+}
