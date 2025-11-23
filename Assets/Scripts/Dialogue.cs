@@ -15,14 +15,17 @@ public class Dialogue : MonoBehaviour
     public List<string> branchSection = new List<string> ();
     private List<string> lines = new List<string>();
 
+    [SerializeField] private DialougeTracker tracker;
     public float textSpeed;
     public GameObject EventMachine;
     private int index;
     private bool inputFinish = false;
+    private int finish;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        finish = 0;
         textComponent.text = string.Empty;
 
         LoadLines();
@@ -32,8 +35,7 @@ public class Dialogue : MonoBehaviour
 
     void LoadLines()
     {
-        DialougeTracker tracker = EventMachine.GetComponent<DialougeTracker>();
-
+        Debug.Log("call");
         string[] rawLines = tracker.GetDialouge().Split(new[] { "\r\n", "\n" }, System.StringSplitOptions.None);
         bool reachedBranch = false;
 
@@ -56,7 +58,7 @@ public class Dialogue : MonoBehaviour
 
     void LoadBranch(char BlockType)
     {
-        DialougeTracker tracker = EventMachine.GetComponent<DialougeTracker>();
+        Debug.Log("Call");
         string[] raw = tracker.GetDialouge().Split(new[] {"\r\n", "\n"}, System.StringSplitOptions.None);
         bool inBlock = false;
 
@@ -129,9 +131,36 @@ public class Dialogue : MonoBehaviour
         }
         else if(inputFinish)
         {
-            Debug.Log(this.returnMood());
-            LoadBranch(this.returnMood());
-            StartCoroutine(TypeLine());
+            Debug.Log("finish");
+            if (finish == 1)
+            {
+                finish = 0;
+                textComponent.text = string.Empty;
+                inputSection = new List<string>();
+                branchSection = new List<string>();
+
+                LoadLines();
+                lines = inputSection;
+                StartDialogue();
+                if (DialougeTracker.instance.IsNessie())
+                {
+                    ChangeCharacterSprite.Instance.SetNessieSprite(1);
+                } else if (DialougeTracker.instance.IsMisha())
+                {
+                    ChangeCharacterSprite.Instance.SetMishaSprite(1);
+                } else if (DialougeTracker.instance.IsRita())
+                {
+                    ChangeCharacterSprite.Instance.SetRitaSprite(1);
+                } else if(DialougeTracker.instance.IsEllie())
+                {
+                    ChangeCharacterSprite.Instance.SetEllieSprite(1);
+                }
+            } else
+            {
+                LoadBranch(this.returnMood());
+                StartCoroutine(TypeLine());
+                finish++;
+            }
         }
         else
         {
@@ -160,6 +189,6 @@ public class Dialogue : MonoBehaviour
                 textComponent.text += c;
                 yield return new WaitForSeconds(textSpeed);
             }
-        }
+    }
     
 }

@@ -1,0 +1,23 @@
+Misha: Hey
+Misha: Where have you been?
+Misha: You owe me, y'know. Hand it over
+*input*
+&
+Misha: Perfect. Just what I was expecting
+Misha: You know how to keep a man satisfied
+Misha: Regardless
+Misha: You should get out of here. The building is about to close
+Misha: If you have any funds left over, you should probably talk to Rita
+Misha: She's been talking about you. Constantly
+&
+#
+Misha: Are you serious?
+Misha: I think you should reanalyze that
+Misha: ...
+Misha: Do you like being in debt?
+Misha: You know what? I don't really care
+Misha: At this rate, you'll be in debt forever
+Misha: ...
+Misha: I don't have time for this
+Misha: Get out
+#

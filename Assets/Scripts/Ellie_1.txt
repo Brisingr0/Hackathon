@@ -1,0 +1,25 @@
+Ellie: C'mon, what took you so long?
+Ellie: I've been waiting here forever!!!
+Ellie: What have you been doing that is soooo important?
+Ellie: I hope you at least remembered something for me
+*input*
+&
+Ellie: Thank goodness! I got scared you forgot about me!
+Ellie: I mean, everyone needs a little fun, right?
+Ellie: Even you!!
+Ellie: Oh, and Rita
+Ellie: Apparently Rita thinks she has a meeting with you?
+Ellie: I mean, I wouldn't tell her I saw you...
+Ellie: If you want to stay...
+Ellie: But, invite me over tomorrow! I want to talk to you a little more!
+&
+!
+Ellie: Oh!
+Ellie: ...
+Ellie: That's it?
+Ellie: I-I...
+Ellie: Did you forget about me?
+Ellie: ...
+Ellie: You spending time with me is all I need, anyway
+Ellie: Oh! And Rita said she was looking for you!
+Ellie: You should probably go find her!

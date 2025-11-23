@@ -22,12 +22,12 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 mood = Mood.good;
                 AffectionLevels.Instance.ChangeNessieLevelBy(1);
-                ChangeCharacterSprite.Instance.SetEllieSprite(2);
+                ChangeCharacterSprite.Instance.SetNessieSprite(2);
             } else if (money/moneyValuesSO.NessieNecessitiesAmount < .99)
             {
                 mood = Mood.bad;
                 AffectionLevels.Instance.ChangeNessieLevelBy(-1);
-                ChangeCharacterSprite.Instance.SetEllieSprite(0);
+                ChangeCharacterSprite.Instance.SetNessieSprite(0);
             }
         }
         else if(DialougeTracker.instance.IsMisha())

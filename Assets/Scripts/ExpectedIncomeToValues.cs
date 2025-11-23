@@ -11,6 +11,8 @@ public class ExpectedIncomeToValues : MonoBehaviour
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private TextMeshProUGUI textMeshProUGUI;
     [SerializeField] private MonthlyMoney monthlyMoney;
+    [SerializeField] private GameObject DialogueController;
+    [SerializeField] private GameObject EventController;
 
     public void SetMoneyValues(float yearly)
     {
@@ -24,6 +26,8 @@ public class ExpectedIncomeToValues : MonoBehaviour
         inputField.gameObject.SetActive(false);
         textMeshProUGUI.gameObject.SetActive(false);
         ChangeCharacterSprite.Instance.SetSpriteActive();
+        DialogueController.SetActive(true);
+        EventController.SetActive(true);
     }
 
     public void GetInputFieldValue()

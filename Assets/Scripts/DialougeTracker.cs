@@ -22,37 +22,75 @@ public class DialougeTracker : MonoBehaviour
     [SerializeField] private MonthlyMoney monthlyMoney;
     [SerializeField] private MoneyValuesSO moneyValuesSO;
     private NPC currentNPC;
+    private NPC nextNPC;
+    private int call;
     private int month;
 
     private void Start()
     {
         instance = this;
         currentNPC = NPC.Nessie;
+        nextNPC = NPC.Nessie;
         month = 0;
+        call = 0;
     }
 
     public String GetDialouge()
     {
+        if (currentNPC != nextNPC)
+        {
+            currentNPC = nextNPC;
+        }
         switch (currentNPC)
         {
             case NPC.Nessie:
-                currentNPC = NPC.Misha;
+                if (call == 1)
+                {
+                    nextNPC = NPC.Misha;
+                    call = 0;
+                } else
+                {
+                    call++;
+                }
                 return NessieDialogue[month].text;
             case NPC.Misha:
-                currentNPC = NPC.Rita;
+                if (call == 1)
+                {
+                    nextNPC = NPC.Rita;
+                    call = 0;
+                } else
+                {
+                    call++;
+                }
                 return MishaDialogue[month].text;
             case NPC.Rita:
-                currentNPC = NPC.Ellie;
+                if (call == 1)
+                {
+                    nextNPC = NPC.Ellie;
+                    call = 0;
+                }
+                else
+                {
+                    call++;
+                }
                 return RitaDialogue[month].text;
             case NPC.Ellie:
-                currentNPC = NPC.Nessie;
-                month++;
-                monthlyMoney.SetMonthlyMoney(moneyValuesSO.baseIncomeMonthly);
-                if (month > 12) {
-                    Debug.Log("Game Over");
-                    return "";
+                if (call == 1)
+                {
+                    nextNPC = NPC.Nessie;
+                    call = 0;
+                    month++;
+                    monthlyMoney.SetMonthlyMoney(moneyValuesSO.baseIncomeMonthly);
+                    if (month > 12)
+                    {
+                        Debug.Log("Game Over");
+                        return "";
+                    }
+                } else
+                {
+                    call++;
                 }
-                return EllieDialogue[month--].text;
+                return EllieDialogue[month - 1 + call].text;
         }
 
         return "";
