@@ -22,10 +22,12 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 mood = Mood.good;
                 AffectionLevels.Instance.ChangeNessieLevelBy(1);
+                ChangeCharacterSprite.Instance.SetEllieSprite(2);
             } else if (money/moneyValuesSO.NessieNecessitiesAmount < .99)
             {
                 mood = Mood.bad;
                 AffectionLevels.Instance.ChangeNessieLevelBy(-1);
+                ChangeCharacterSprite.Instance.SetEllieSprite(0);
             }
         }
         else if(DialougeTracker.instance.IsMisha())
@@ -34,15 +36,18 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 mood = Mood.good;
                 AffectionLevels.Instance.ChangeMishaLevelBy(1);
+                ChangeCharacterSprite.Instance.SetMishaSprite(2);
             }
             else if (money / moneyValuesSO.MishaLoanAmount < .95)
             {
                 mood = Mood.bad;
                 AffectionLevels.Instance.ChangeMishaLevelBy(-1);
+                ChangeCharacterSprite.Instance.SetMishaSprite(0);
             }
             else
             {
                 mood = Mood.neutral;
+                ChangeCharacterSprite.Instance.SetMishaSprite(1);
             }
         }
         else if (DialougeTracker.instance.IsRita())
@@ -51,15 +56,18 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 mood = Mood.good;
                 AffectionLevels.Instance.ChangeRitaLevelBy(1);
+                ChangeCharacterSprite.Instance.SetRitaSprite(2);
             }
             else if (money / moneyValuesSO.MishaLoanAmount < .95)
             {
                 mood = Mood.bad;
                 AffectionLevels.Instance.ChangeRitaLevelBy(-1);
+                ChangeCharacterSprite.Instance.SetRitaSprite(0);
             }
             else
             {
                 mood = Mood.neutral;
+                ChangeCharacterSprite.Instance.SetRitaSprite(1);
             }
         }
         else if (DialougeTracker.instance.IsEllie())
@@ -68,15 +76,18 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 mood = Mood.good;
                 AffectionLevels.Instance.ChangeEllieLevelBy(1);
+                ChangeCharacterSprite.Instance.SetEllieSprite(2);
             }
             else if (money / moneyValuesSO.EllieEntertainmentAmount < .95)
             {
                 mood = Mood.bad;
                 AffectionLevels.Instance.ChangeEllieLevelBy(-1);
+                ChangeCharacterSprite.Instance.SetEllieSprite(0);
             }
             else
             {
                 mood = Mood.neutral;
+                ChangeCharacterSprite.Instance.SetEllieSprite(1);
             }
         }
     }
