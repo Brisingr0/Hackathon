@@ -1277,6 +1277,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 72688947351877730, guid: 68e011c8b4089b24d88e7041dbf7edc1, type: 3}
+      propertyPath: moneyValuesSO
+      value: 
+      objectReference: {fileID: 11400000, guid: a12086504d8b272479cc9d97843d26bc, type: 2}
     - target: {fileID: 2027525124784558678, guid: 68e011c8b4089b24d88e7041dbf7edc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 998.7623
@@ -1317,13 +1321,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6961993398204909585, guid: 68e011c8b4089b24d88e7041dbf7edc1, type: 3}
+      propertyPath: monthlyMoney
+      value: 
+      objectReference: {fileID: 730107474}
+    - target: {fileID: 6961993398204909585, guid: 68e011c8b4089b24d88e7041dbf7edc1, type: 3}
+      propertyPath: moneyValuesSO
+      value: 
+      objectReference: {fileID: 11400000, guid: a12086504d8b272479cc9d97843d26bc, type: 2}
     - target: {fileID: 8437713924664451925, guid: 68e011c8b4089b24d88e7041dbf7edc1, type: 3}
       propertyPath: m_Name
       value: NPC_EventMachine
       objectReference: {fileID: 0}
     - target: {fileID: 8437713924664451925, guid: 68e011c8b4089b24d88e7041dbf7edc1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1637,3 +1649,4 @@ SceneRoots:
   - {fileID: 509904047}
   - {fileID: 1946154062}
   - {fileID: 1184606799}
+  - {fileID: 144353607}
