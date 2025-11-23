@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2027525124784558678}
   - component: {fileID: 6961993398204909585}
   - component: {fileID: 72688947351877730}
+  - component: {fileID: 4897891845304451345}
+  - component: {fileID: 8130557856870156960}
   m_Layer: 0
   m_Name: NPC_EventMachine
   m_TagString: Untagged
@@ -46,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NessieDialogue:
-  - {fileID: 4900000, guid: c082e3f7ec7dc0d4db488f40e9b4c462, type: 3}
+  - {fileID: 4900000, guid: a36c975caa070e043934158770a239be, type: 3}
   MishaDialogue: []
   RitaDialogue: []
   EllieDialogue: []
@@ -64,4 +66,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ea5e8798167064ea63cf10663b5d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyValuesSO: {fileID: 0}
+  moneyValuesSO: {fileID: 11400000, guid: a12086504d8b272479cc9d97843d26bc, type: 2}
+--- !u!114 &4897891845304451345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437713924664451925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c4832cc3bd53f408c392722ff59e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 0}
+  EventMachine: {fileID: 8437713924664451925}
+  EditEnd: 0
+--- !u!114 &8130557856870156960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437713924664451925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11a47c8aa7163d46951b8e50f7628c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundsSO: {fileID: 11400000, guid: fca0b164005ec3e4a86e96c06cd4033c, type: 2}
+  Background: {fileID: 0}
+  bar: {fileID: 0}
