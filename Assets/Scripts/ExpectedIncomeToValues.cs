@@ -23,6 +23,7 @@ public class ExpectedIncomeToValues : MonoBehaviour
         moneyValuesSO.EllieEntertainmentAmount = (float)(moneyValuesSO.baseIncomeMonthly * 0.1);
         inputField.gameObject.SetActive(false);
         textMeshProUGUI.gameObject.SetActive(false);
+        ChangeCharacterSprite.Instance.SetSpriteActive();
     }
 
     public void GetInputFieldValue()
