@@ -17,9 +17,9 @@ public class MoneySpend : MonoBehaviour
         input.gameObject.SetActive(false);
     }
 
-    public int GetInput(string text)
+    public void GetInput(string text)
     {
-        Debug.Log(text);
+        Debug.Log("accessed");
         int InputNum = 0;
         if(int.TryParse(input.text, out numValue))
         {
@@ -30,14 +30,12 @@ public class MoneySpend : MonoBehaviour
             InputNum = 0;
         }
 
-        //disappear input field
-        DeleteInputField();
-
         //call set mood
         NewBehaviourScript mood = EventMachine.GetComponent<NewBehaviourScript>();
         mood.SetMood(numValue);
 
-        return InputNum;
+        //disappear input field
+        DeleteInputField();
     }
 
     public void CallInputField()
@@ -47,8 +45,8 @@ public class MoneySpend : MonoBehaviour
 
     public void DeleteInputField()
     {
-        input.gameObject.SetActive(false);
         EditEnd = true;
+        input.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

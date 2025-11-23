@@ -1,0 +1,23 @@
+Nessie: Hi!
+Nessie: How much money are you willing to spend on me?
+*input*
+&
+Nessie: Wow! You Spent so much on necessities?
+Nessie: You know how much I love necessities!
+Nessie: You met your goals...
+Nessie: I'm pretty impressed. Honestly, I was scared you wouldn't make it
+Nessie: Hey, if you have a little time, Misha was asking about you
+Nessie: I think you should go see him!
+&
+!
+Nessie: Oh. That's it?
+Nessie: No, no, it's fine!
+Nessie: I'm sure I can manage. But I'm not sure if this apartment...
+Nessie: Whatever. It's fine. You should probably go see Misha. He's been asking about you
+!
+#
+Nessie: Nothing? Are you serious?
+Nessie: ...
+Nessie: Whatever. That's your choice, I suppose
+Nessie: Misha was asking about you. You should probably go
+#

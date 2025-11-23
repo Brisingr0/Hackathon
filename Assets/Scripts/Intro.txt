@@ -1,6 +1,6 @@
 Nessie: Hi! My name is Nessie!
 Nessie: What's your name?
-*input*
+*inputName*
 Nessie: Before I introduce you to some very special friends, I just have a few questions!
 RULES Box: This game is designed to help you manage your budget! To determine your budget, Nessie will be asking you a series of questions. Your answers to these questions will not be shared.
 Nessie: What is your expected future salary?
@@ -19,3 +19,28 @@ Nessie: Rent, food, gas...all of it falls into my area
 Nessie: You better not disappoint me
 *Nessie normal*
 Nessie: Now, let me introduce you to my friends!
+*Misha normal*
+Nessie: This is Misha. Misha Mavlynov. He's a close friend of mine
+Nessie: Misha works in our loans department. He loves loans!
+Nessie: If you don't pay your loans, he might get a little...
+*Misha angry*
+Nessie: Well, hopefully you never have to see how he gets'
+*Rita normal*
+Nessie: Rita loves to relax. All day, every day!
+Nessie: She's obsessed with the idea of retirement
+Nessie: Every dollar you spend on your savings or your RothIRA will impress her
+Nessie: Investing in her should be a priority. If you don't...
+*Rita angry*
+Nessie: She gets easily ticked off
+*Ellie normal*
+Nessie: Ellie is the newest member of the office
+Nessie: She doesn't take her job very seriously, if you can tell
+Nessie: But that's fine, I suppose. If you want to impress her, you just have to show her some fun
+*Ellie sad*
+Nessie: She gets sad if you don't, I suppose. Do with that information what you will
+*Nessie normal*
+Nessie: And with that, welcome to the game!
+*Background house*
+Nessie: This is where you live! Cute, huh?
+Nessie: Impress me, and I might consider updating your situation!
+Nessie: You know, since I gave you a place to live, don't you think you should give me something in return?
